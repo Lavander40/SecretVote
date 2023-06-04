@@ -18,18 +18,18 @@ server.title("Система валидации голосов")
 server.resizable(False, False)
 ########################################################################################################################
 def com1():
-    if log.get() == '' or pas.get() == '':
-        lb['text'] = "Пожалуйста, заполните поля регистрации"
-        return
-    if not reg(log.get(), pas.get()):
-        lb['text'] = "Данные пользователя не верны"
-        return
+    # if log.get() == '' or pas.get() == '':
+    #     lb['text'] = "Пожалуйста, заполните поля регистрации"
+    #     return
+    # if not reg(log.get(), pas.get()):
+    #     lb['text'] = "Данные пользователя не верны"
+    #     return
     lb['text'] = "Вы принимаете участие в голосовании\nВыберете кандидата"
     # clear
-    log_lb.pack_forget()
-    log.pack_forget()
-    pas_lb.pack_forget()
-    pas.pack_forget()
+    # log_lb.pack_forget()
+    # log.pack_forget()
+    # pas_lb.pack_forget()
+    # pas.pack_forget()
     join_bt.pack_forget()
     # set
     g1.pack()
@@ -38,7 +38,7 @@ def com1():
     res_bt.pack(pady=10)
     gen_lb.pack()
     # server
-    notice_lb['text'] = f"Пользователь {log.get()} учавствует в голосовании"
+    notice_lb['text'] = f"Пользователь подключился к голосованию"#{log.get()} учавствует в голосовании"
 
 def reg(login, password):
     return True
@@ -86,17 +86,17 @@ def send():
 
 ########################################################################################################################
 
-log_lb = Label(text="Идентификатор голосующего:")
-pas_lb = Label(text="Секретный ключ голосующего:")
-log = Entry()
-pas = Entry()
+# log_lb = Label(text="Идентификатор голосующего:")
+# pas_lb = Label(text="Секретный ключ голосующего:")
+# log = Entry()
+# pas = Entry()
 join_bt = Button(text="Принять участие в голосовании", command=com1)
 lb = Label()
 
-log_lb.pack(pady=10)
-log.pack()
-pas_lb.pack(pady=5)
-pas.pack()
+# log_lb.pack(pady=10)
+# log.pack()
+# pas_lb.pack(pady=5)
+# pas.pack()
 join_bt.pack(pady=10)
 lb.pack(pady=10)
 # -------------------------------------------------------------
