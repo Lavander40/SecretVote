@@ -1,4 +1,5 @@
 # SecretVote
+@startgit
 @startuml
 
 class Расписание {
