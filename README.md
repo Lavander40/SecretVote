@@ -1,6 +1,6 @@
 # SecretVote
 '''plantuml
-@startuml
+@startuml component
 
 class Расписание {
   -classList: list
@@ -70,3 +70,4 @@ class Материал {
 Студент -up-* Группа: относится к
 
 @enduml
+'''
